@@ -4,15 +4,20 @@ import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplet
 import Ionicicons from "react-native-vector-icons/Ionicons";
 import AntDesign from "react-native-vector-icons/AntDesign";
 
-function SearchBar(){
+interface Props {
+    setcity: (value: string) => void,
+}
+
+function SearchBar(props: Props){
     return (
         <View style={{
             marginTop: 15,
             flexDirection: "row",
         }}>
             <GooglePlacesAutocomplete
-                query={{  }}
+                query={{ /* Places API key from google cloud */ }}
                 placeholder="Search.."
+                onPress={ (data, detail) => { props.setcity(data.description) } }
                 styles={{
                     textInput: {
                         backgroundColor: "#eee",
