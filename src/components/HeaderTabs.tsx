@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { Text, SafeAreaView, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import styles from "../styles";
 
 function HeaderTabs(){
 	const [activeTab, setactiveTab] = useState<string>("Delivery")
 
 	return (
-		<SafeAreaView style={{
-			paddingTop: 48,
+		<View style={{
 			flexDirection: "row",
 			alignItems: "center",
 		}}>
 			<HeaderButton text="Delivery" activeTab={ activeTab } setActiveTab={ setactiveTab } />
 			<HeaderButton text="Pickup" activeTab={ activeTab } setActiveTab={ setactiveTab } />
-		</SafeAreaView>
+		</View>
 	)
 }
 
