@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
-import styles from "../styles";
+import styles from "../../styles";
 
 interface Props {
 	activeTab: string,

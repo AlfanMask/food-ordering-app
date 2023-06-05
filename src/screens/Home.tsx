@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { ScrollView } from "react-native";
 import { SafeAreaView, View } from "react-native";
 import { Divider } from "react-native-elements";
-import BottomTabs from "../components/BottomTabs";
-import Categories from "../components/Categories";
-import HeaderTabs from "../components/HeaderTabs";
-import RestaurantItems, { localRestaurants } from "../components/RestaurantItems";
-import SearchBar from "../components/SearchBar";
+import BottomTabs from "../components/home/BottomTabs";
+import Categories from "../components/home/Categories";
+import HeaderTabs from "../components/home/HeaderTabs";
+import RestaurantItems, { localRestaurants } from "../components/home/RestaurantItems";
+import SearchBar from "../components/home/SearchBar";
 
 function Home(){
 	const [restaurantData, setrestaurantData] = useState<Array<any>>(localRestaurants);
